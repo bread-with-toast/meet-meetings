@@ -2,19 +2,32 @@ import tkinter
 import customtkinter
 
 customtkinter.set_appearance_mode("dark")
-customtkinter.set_default_color_theme("green")
+customtkinter.set_default_color_theme("blue")
 
 root = customtkinter.CTk()
 root.geometry("400x350")
 root.iconbitmap("Main.ico")
 root.title("Meet Meetings")
 
-def dark_theme():
-    customtkinter.set_appearance_mode("dark")
+# def dark_theme():
+#     customtkinter.set_appearance_mode("dark")
 
-def light_theme():
-    customtkinter.set_appearance_mode("light")
+# def light_theme():
+#     customtkinter.set_appearance_mode("light")
 
+def choiceChosen(choice):
+    if choice == "Dark Green":
+        customtkinter.set_appearance_mode("dark")
+        customtkinter.set_default_color_theme("green")
+    if choice == "Dark Blue":
+        customtkinter.set_appearance_mode("dark")
+        customtkinter.set_default_color_theme("blue")
+    if choice == "Light Blue":
+        customtkinter.set_appearance_mode("light")
+        customtkinter.set_default_color_theme("blue")
+    if choice == "Light Green":
+        customtkinter.set_appearance_mode("light")
+        customtkinter.set_default_color_theme("green")
 
 def open_app():
     def plan():
@@ -79,7 +92,26 @@ customtkinter.CTkLabel(frame, text="The best way to plan your meetings for", tex
 customtkinter.CTkLabel(frame, text="you, your co-workers and your employees.", text_font=("JetBrains Mono", 10)).pack()
 
 customtkinter.CTkButton(frame, text="Open Application", text_font=("JetBrains Mono", 10), command=open_app).pack(pady=10)
-customtkinter.CTkButton(frame, text="Dark Theme", text_font=("JetBrains Mono", 10), command=dark_theme).pack(pady=10)
-customtkinter.CTkButton(frame, text="Light Theme", text_font=("JetBrains Mono", 10), command=light_theme).pack(pady=10)
+# customtkinter.CTkButton(frame, text="Dark Theme", text_font=("JetBrains Mono", 10), command=dark_theme).pack(pady=10)
+# customtkinter.CTkButton(frame, text="Light Theme", text_font=("JetBrains Mono", 10), command=light_theme).pack(pady=10)
+
+item_chosen = customtkinter.StringVar(value="Dark Blue")
+
+options = customtkinter.CTkComboBox(frame, values=
+    [
+    "Dark Blue",
+    "Dark Green",
+    "Light Blue",
+    "Light Green"
+    ],
+
+    variable=item_chosen,
+
+    text_font=("JetBrains Mono", 10),
+
+    command=choiceChosen
+)
+
+options.pack(pady=20)
 
 root.mainloop()
