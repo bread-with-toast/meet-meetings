@@ -4,7 +4,7 @@
 Meet Meetings is a desktop application designed to allow you to generate a plan for your meetings so you don't go off-topic. It works by allowing you to enter the dat and time of the meeting, three key points you want to cover an any notes. It saves your input to a file and displays it in another window.
 
 ## How can I run it?
-Simply download the "Release" file in the releases sectiom and run the main.exe file.
+Simply download the "Release.zip" folder in the releases sectiom and unzip it. Then, run the main.exe file.
 
 ## Screenshots
 ![picb](https://user-images.githubusercontent.com/108555960/185964047-6613c146-6a0f-46fc-95ce-4c52caf82d54.png)
